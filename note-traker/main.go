@@ -9,6 +9,10 @@ import (
 	"example.com/noteTracker/note"
 )
 
+type saver interface {
+	Save() error
+}
+
 func main() {
 	fmt.Println("Welcome to note-traker")
 
@@ -29,6 +33,8 @@ func main() {
 		fmt.Println(err)
 	}
 }
+
+
 
 func getData(msg string) string {
 	fmt.Print(msg)
