@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	result := add(1.66,2.55)
+	result := add(add(1.66,2.55), 0.79)
 
 	fmt.Println(result)
 }
