@@ -33,7 +33,7 @@ func fromArrToSlice(arr [5]int) []int {
 	return arr[:]
 }
 
-func main() {
+func maiwn() {
 	// if longest := findLongest(getPassedArgs(3)); len(longest) > 0 {
 	// 	fmt.Println("The longest word passed was:", longest)
 	// } else {
@@ -60,7 +60,7 @@ func main() {
 
 	s1 := []int{1, 2, 3, 4, 5}
 	s2 := make([]int, len(s1))
-	copied := copy(s2, s1)
+	// copied := copy(s2, s1)
 
 	fmt.Printf("%p\n", s1)
 	fmt.Printf("%p\n", s2)
