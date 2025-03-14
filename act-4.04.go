@@ -4,7 +4,7 @@ import "fmt"
 
 type muInt int16
 
-func main() {
+func mainww() {
 	words := []string{"Good", "Good", "bad", "Good", "Good"}
 	words = append(words[:2], words[3:]...)
 
