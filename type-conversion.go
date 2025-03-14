@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main() {
+func main1() {
 	var num int64 = math.MaxInt64
 	var smallerNum int8 = int8(num)
 
