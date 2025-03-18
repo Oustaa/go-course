@@ -37,7 +37,7 @@ func printAny(args ...any) {
 	fmt.Println(args...)
 }
 
-func main() {
+func mai22n() {
 	locals := []Local{{"en", "US"}, {"en", "CN"}, {"fr", "CN"}, {"fr", "FR"}, {"ru", "RU"}}
 
 	if len(os.Args) < 2 {

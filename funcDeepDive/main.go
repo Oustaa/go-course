@@ -35,7 +35,7 @@ func transformNumber(numbers *[]int, transform func(int) int) []int {
 	return dnumbers
 }
 
-func getTransformerFunc(numbers *[]int) func (int) int {
+func getTransformerFunc(numbers *[]int) func(int) int {
 	if (*numbers)[0] == 1 {
 		return double
 	}
@@ -56,9 +56,8 @@ func testReturnFunc() func(int) int {
 	}
 }
 
-
-func createTransformer(factor int) func (int) int {
-	return func (number int) int {
+func createTransformer(factor int) func(int) int {
+	return func(number int) int {
 		return number * factor
 	}
 }
@@ -68,5 +67,9 @@ func factorial(number int) int {
 		return 1
 	}
 
-	return number * factorial(number - 1)
+	return number * factorial(number-1)
+}
+
+func printAny(args interface{}) {
+	fmt.Print(args)
 }
