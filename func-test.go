@@ -87,7 +87,7 @@ import "fmt"
 // 	}
 // }
 
-func main() {
+func mai2n() {
 	x := decriment(34)
 
 	fmt.Println(x())
