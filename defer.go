@@ -43,7 +43,7 @@ func _fff() {
 	return
 }
 
-func main() {
+func maisd234n() {
 	_fff()
 
 	me := Dev{"Oussama Tailba", [7]int{}}
