@@ -51,9 +51,11 @@ import (
 var (
 	ErrHourlyRate  = errors.New("invalid hourly rate")
 	ErrHoursWorked = errors.New("invalid hours worked per week")
+	ErrInvalidNam = errors.New("invalid last name")
+	ErrInvalidNumber = errors.New("invalid routing number")
 )
 
-func main() {
+func maiwern() {
 	pay := payDay(100, 25)
 	fmt.Println(pay)
 	pay = payDay(100, 200)
