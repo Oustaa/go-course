@@ -53,7 +53,7 @@ func (d *directDeposit) report() {
 	fmt.Println("Account Number: ", d.accountNumber)
 }
 
-func main() {
+func mainwe() {
 	account := directDeposit{"Abe", "", "XYZ Inc", 17, 1809}
 
 	account.validateLastName()
