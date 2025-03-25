@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-CREATE TABLE IS NOT EXISTS workouts (
+CREATE TABLE IF NOT EXISTS workouts (
     id BIGSERIAL PRIMARY KEY,
     -- user_id
     title VARCHAR(255) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE IS NOT EXISTS workouts (
 )
 -- +goose StatementEnd
 
--- +goose Dows
+-- +goose Down
 -- +goose StatementBegin
 DROP TABLE workouts;
 -- +goose StatementEnd

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Person struct {
+type Person82 struct {
 	name  string
 	age   int8
 	email string
@@ -24,7 +24,7 @@ func main2() {
 	// }
 	// fmt.Printf("%#v\n", intArr)
 
-	people := [10]Person{
+	people := [10]Person82{
 		{"Oussama Tailba", 27, "otailaba98@gmail.com"},
 		{"kaoutar Taki", 22, "ktaki00@gmail.com"},
 	}

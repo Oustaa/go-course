@@ -12,7 +12,7 @@ func (c *Computer) addGames(game ...string) {
 	c.Games = append(c.Games, game...)
 }
 
-func main() {
+func main2345() {
 	myPc := Computer{"I7 12000K", "RTX 4080", []string{}}
 
 	fmt.Printf("%+v\n", myPc)

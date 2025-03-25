@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-CREATE TABLE IS NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS users (
     id BIGSERIAL PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE IS NOT EXISTS users (
 )
 -- +goose StatementEnd
 
--- +goose Dows
+-- +goose Down
 -- +goose StatementBegin
 DROP TABLE users;
 -- +goose StatementEnd
