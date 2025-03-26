@@ -21,7 +21,7 @@ func main() {
 		panic(err)
 	}
 
-	defer app.DB.Close()
+    //defer app.DB.Close()
 
 	app.Logger.Printf("We are runing on port %d\n", port)
 
