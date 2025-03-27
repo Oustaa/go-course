@@ -15,11 +15,11 @@ import (
 type Application struct {
 	Logger         *log.Logger
 	WorkoutHandler *api.WorkoutHandler
-	// DB             *sql.DB
+	DB             *sql.DB
 }
 
 func NewApplication() (*Application, error) {
-    // pgDB, err := store.Open()
+	pgDB, err := store.Open()
 
 	if err != nil {
 		return nil, err
@@ -38,7 +38,7 @@ func NewApplication() (*Application, error) {
 	app := &Application{
 		Logger:         logger,
 		WorkoutHandler: workoutHandler,
-		// DB:             pgDB,
+		DB:             pgDB,
 	}
 
 	return app, nil
