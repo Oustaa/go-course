@@ -33,6 +33,7 @@ func NewPostgresWorkoutStore(db *sql.DB) *PostgresWorkoutStore {
 type WorkoutStore interface {
 	CreateWorkout(*Workout) (*Workout, error)
 	GetWorkoutById(id int64) (*Workout, error)
+	UpdateWorkout(*Workout) error
 }
 
 func (pg *PostgresWorkoutStore) CreateWorkout(workout *Workout) (*Workout, error) {
@@ -43,7 +44,7 @@ func (pg *PostgresWorkoutStore) CreateWorkout(workout *Workout) (*Workout, error
 	defer tx.Rollback()
 
 	query :=
-		`INSERT INTO workouts (title, decription, duration_minutes, calories_burned)
+		`INSERT INTO workouts (title, description, duration_minutes, calories_burned)
 	VALUES($1, $2, $3, $4)
 	RETURNING id
 	`
@@ -70,4 +71,85 @@ func (pg *PostgresWorkoutStore) CreateWorkout(workout *Workout) (*Workout, error
 	}
 
 	return workout, nil
+}
+
+func (pg *PostgresWorkoutStore) GetWorkoutById(id int64) (*Workout, error) {
+	workout := &Workout{}
+
+	query := `
+		SELECT id, title, description, duration_minutes, calories_burned
+		FROM workouts
+		WHERE id = $1`
+
+	err := pg.db.QueryRow(query, id).Scan(&workout.ID, &workout.Title, &workout.Description, &workout.DurationMinutes, &workout.CaloriesBurned)
+	if err == sql.ErrNoRows {
+		return nil, nil
+	}
+
+	if err != nil {
+		return nil, err
+	}
+
+	entryQuery := `
+		SELECT id, exercise_name, sets, reps, duration_seconds, weight, notes, order_index
+		FROM workouts_entries
+		WHERE workout_id = $1
+		ORDER BY order_index
+	`
+
+	rows, err := pg.db.Query(entryQuery, id)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		var entry WorkoutEntry
+		rows.Scan(
+			&entry.ID,
+			&entry.ExerciseName,
+			&entry.Sets,
+			&entry.Reps,
+			&entry.DurationSeconds,
+			&entry.Weight,
+			&entry.Notes,
+			&entry.OrderIndex,
+		)
+
+		workout.Entries = append(workout.Entries, entry)
+	}
+
+	return workout, nil
+}
+
+func (pg *PostgresWorkoutStore) UpdateWorkout(workout *Workout) error {
+	tx, err := pg.db.Begin()
+	if err != nil {
+		return err
+	}
+	defer tx.Rollback()
+
+	query := `
+		UPDATE workout
+		SET title = $1, description = $2, duration_minutes = $3, calories_burned = $4
+		WHERE id = $5 
+	`
+
+	result, err := pg.db.Exec(query, &workout.Title, &workout.Description, &workout.DurationMinutes, &workout.CaloriesBurned, &workout.ID)
+	if err != nil {
+		return err
+	}
+
+	rowsAffected, err := result.RowsAffected()
+	if err != nil {
+		return err
+	}
+
+	if rowsAffected == 0 {
+		return sql.ErrNoRows
+	}
+
+	// implements the update for entries also
+	// delete the entire for the updated workout and reinsert them
+	return tx.Commit()
 }

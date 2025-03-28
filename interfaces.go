@@ -269,7 +269,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func maiweewn() {
 	var str interface{} = "the book club"
 	v, isValid := str.(int)
 	if isValid {
@@ -277,6 +277,10 @@ func main() {
 	} else {
 		fmt.Println("You must provide a number")
 	}
+
+	// fmt.Println("Max is: ", Maximum([]int{1, 2, 3, 4, 5, 6, 7}))
+	// fmt.Println("Max is: ", Maximum([]float64{1, 2, 3, 4, 5, 6, 7}))
+	// fmt.Println("Max is: ", Maximum([]float32{1, 2, 3, 4, 5, 6, 7}))
 }
 
 func multiTypeFunciton(value interface{}) {
