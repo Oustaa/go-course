@@ -151,5 +151,43 @@ func (pg *PostgresWorkoutStore) UpdateWorkout(workout *Workout) error {
 
 	// implements the update for entries also
 	// delete the entire for the updated workout and reinsert them
+	deleteQuery := `
+		DELETE * FROM eorkout_entries
+		WHERE workout_id $1
+	`
+	_, err = tx.Exec(deleteQuery, workout.ID)
+	if err != nil {
+		return err
+	}
+
+	entryQuery := `
+		SELECT id, exercise_name, sets, reps, duration_seconds, weight, notes, order_index
+		FROM workouts_entries
+		WHERE workout_id = $1
+		ORDER BY order_index
+	`
+
+	rows, err := pg.db.Query(entryQuery, workout.ID)
+	if err != nil {
+		return err
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		var entry WorkoutEntry
+		rows.Scan(
+			&entry.ID,
+			&entry.ExerciseName,
+			&entry.Sets,
+			&entry.Reps,
+			&entry.DurationSeconds,
+			&entry.Weight,
+			&entry.Notes,
+			&entry.OrderIndex,
+		)
+
+		workout.Entries = append(workout.Entries, entry)
+	}
+
 	return tx.Commit()
 }

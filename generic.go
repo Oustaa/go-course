@@ -50,7 +50,7 @@ func FindLargestRanchStock[K comparable, V int | float64](m map[K]V) K {
 	return name
 }
 
-func main() {
+func mainwe2() {
 	animalStock := map[string]int{
 		"Chicken": 5,
 		"Cattle":  20,

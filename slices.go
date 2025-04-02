@@ -1,14 +1,14 @@
 package main
 
 import (
-	"fmt"
+	F "fmt"
 	"os"
 )
 
 func getPassedArgs(minArgs int) []string {
-	// fmt.Printf("%#v\n", os.Args[1:])
+	// F.Printf("%#v\n", os.Args[1:])
 	if len(os.Args) < minArgs {
-		fmt.Printf("At least %v arguments are needed\n", minArgs)
+		F.Printf("At least %v arguments are needed\n", minArgs)
 		os.Exit(1)
 	}
 	var args []string
@@ -35,10 +35,10 @@ func fromArrToSlice(arr [5]int) []int {
 
 func maiwn() {
 	// if longest := findLongest(getPassedArgs(3)); len(longest) > 0 {
-	// 	fmt.Println("The longest word passed was:", longest)
+	// 	F.Println("The longest word passed was:", longest)
 	// } else {
 
-	// 	fmt.Println("There was an error")
+	// 	F.Println("There was an error")
 	// 	os.Exit(1)
 	// }
 
@@ -51,18 +51,18 @@ func maiwn() {
 	slice = append(slice, 123_000)
 	arr[2] = 23
 
-	fmt.Printf("%#v\n", arr)
-	fmt.Printf("%#v\n", slice)
-	fmt.Printf("%#v\n", cap(slice))
+	F.Printf("%#v\n", arr)
+	F.Printf("%#v\n", slice)
+	F.Printf("%#v\n", cap(slice))
 
 	makeSlice := make([]string, 12) // (type, len, capacity) => len for the slice, capacity for the underlying array
-	fmt.Printf("%#v\n", makeSlice)
+	F.Printf("%#v\n", makeSlice)
 
 	s1 := []int{1, 2, 3, 4, 5}
 	s2 := make([]int, len(s1))
 	// copied := copy(s2, s1)
 
-	fmt.Printf("%p\n", s1)
-	fmt.Printf("%p\n", s2)
+	F.Printf("%p\n", s1)
+	F.Printf("%p\n", s2)
 
 }

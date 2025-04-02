@@ -15,6 +15,8 @@ func printPeople(people map[string]Person2) {
 
 func mainw() {
 
+	// myMap := map[string]float64{}
+
 	first_map := map[string]Person2{
 		"DEV-206-1":   {"Kaoutar Takiww", 22},
 		"DEV-206wers": {"Oussama Tailba", 58},

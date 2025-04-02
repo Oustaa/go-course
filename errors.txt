@@ -1,0 +1,22 @@
+2025/04/02 23:00:02 /media/ousta/1CD25521D25501063/projects/go-course/log.go:27: Demo app
+2025/04/02 23:00:02 /media/ousta/1CD25521D25501063/projects/go-course/log.go:28: Thanos is here!
+2025/04/02 23:00:02 /media/ousta/1CD25521D25501063/projects/go-course/log.go:30: Run
+2025/04/02 23:00:11 /media/ousta/1CD25521D25501063/projects/go-course/log.go:27: Demo app
+2025/04/02 23:00:11 /media/ousta/1CD25521D25501063/projects/go-course/log.go:28: Thanos is here!
+2025/04/02 23:00:11 /media/ousta/1CD25521D25501063/projects/go-course/log.go:29: WHAAT THE FUCK HAPPENED
+2025/04/02 23:00:26 /media/ousta/1CD25521D25501063/projects/go-course/log.go:27: Demo app
+2025/04/02 23:00:26 /media/ousta/1CD25521D25501063/projects/go-course/log.go:28: Thanos is here!
+2025/04/02 23:00:26 /media/ousta/1CD25521D25501063/projects/go-course/log.go:29: WHAAT THE FUCK HAPPENED
+2025/04/02 23:00:26 /media/ousta/1CD25521D25501063/projects/go-course/log.go:22: SOME FUCKING ERROR HAPPENED
+2025/04/02 23:09:45 /media/ousta/1CD25521D25501063/projects/go-course/log.go:31: Demo app
+2025/04/02 23:09:45 /media/ousta/1CD25521D25501063/projects/go-course/log.go:32: Thanos is here!
+2025/04/02 23:09:45 /media/ousta/1CD25521D25501063/projects/go-course/log.go:33: WHAAT THE FUCK HAPPENED
+2025/04/02 23:09:45 /media/ousta/1CD25521D25501063/projects/go-course/log.go:23: SOME FUCKING ERROR HAPPENED
+2025/04/02 23:09:45 /media/ousta/1CD25521D25501063/projects/go-course/log.go:31: Demo app
+2025/04/02 23:09:45 /media/ousta/1CD25521D25501063/projects/go-course/log.go:32: Thanos is here!
+2025/04/02 23:09:45 /media/ousta/1CD25521D25501063/projects/go-course/log.go:33: WHAAT THE FUCK HAPPENED
+2025/04/02 23:09:45 /media/ousta/1CD25521D25501063/projects/go-course/log.go:23: SOME FUCKING ERROR HAPPENED
+2025/04/02 23:10:12 /media/ousta/1CD25521D25501063/projects/go-course/log.go:31: Demo app
+2025/04/02 23:10:12 /media/ousta/1CD25521D25501063/projects/go-course/log.go:32: Thanos is here!
+2025/04/02 23:10:12 /media/ousta/1CD25521D25501063/projects/go-course/log.go:33: WHAAT THE FUCK HAPPENED
+2025/04/02 23:10:12 /media/ousta/1CD25521D25501063/projects/go-course/log.go:23: SOME FUCKING ERROR HAPPENED

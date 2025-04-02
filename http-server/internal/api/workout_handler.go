@@ -83,3 +83,13 @@ func (wh *WorkoutHandler) CreateWorkout(w http.ResponseWriter, r *http.Request) 
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(createdWorkout)
 }
+
+func (wh *WorkoutHandler) UpdateWorkout(w http.ResponseWriter, r *http.Request) {
+	p := struct {
+		Name string `json:"name"`
+		Age  int    `json:"age"`
+	}{Name: "Oussama Tailba", Age: 99}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(p)
+}
