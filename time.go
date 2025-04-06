@@ -35,7 +35,7 @@ import (
 	"time"
 )
 
-func main() {
+func maw232in() {
 	deadline := time.Duration(5 * time.Second)
 	fmt.Println("Deadline for the transaction is", deadline)
 }

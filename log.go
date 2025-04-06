@@ -25,7 +25,7 @@ func main2344() {
 
 	}()
 
-	intToString := strconv.Itoa(23.3)
+	intToString := strconv.Itoa(23)
 	fmt.Printf("%#v\n", intToString)
 
 	Logger.Println("Demo app")
