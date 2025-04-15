@@ -29,6 +29,6 @@ func (p *Player) UseItem(item string) {
 
 }
 
-func mian() {
+func main() {
 
 }

@@ -7,7 +7,7 @@ import (
 	"syscall"
 )
 
-func main() {
+func dmain() {
 	sigs := make(chan os.Signal, 1)
 	done := make(chan struct{})
 	signal.Notify(sigs, syscall.SIGINT)
