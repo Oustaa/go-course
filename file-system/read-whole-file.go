@@ -24,7 +24,7 @@ import (
 	"os"
 )
 
-func main() {
+func ma23in() {
 	f, err := os.Open("clean-up.go")
 	if err != nil {
 		log.Fatalf("unable to read file: %v", err)
