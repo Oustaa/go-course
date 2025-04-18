@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: "book-database"
+    image: postgres:12.4-alpine
+    volumes:
+      - "./database/postgres-data:/var/lib/postgresql/data:rw"
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: "postgres"
+      POSTGRES_USER: "ousta"
+      POSTGRES_PASSWORD: "Password12"
+    restart: unless-stopped
+
