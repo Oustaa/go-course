@@ -12,7 +12,7 @@ func (h hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(msg))
 }
 
-func main() {
+func maisdsdn() {
 	http.HandleFunc("/chapter1", func(w http.ResponseWriter, r *http.Request) {
 		msg := "<h1>Chapter 1</h1>"
 		w.Write([]byte(msg))

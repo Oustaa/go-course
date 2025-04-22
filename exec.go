@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func main() {
+func ma2in() {
 	timeLimit := 5 * time.Second
 	fmt.Println("Press Enter to start the stopwatch...")
 	_, err := fmt.Scanln() // Wait for user to press Enter
