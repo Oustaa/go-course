@@ -11,12 +11,12 @@ import (
 	"github.com/oustaa/practice-http/database"
 )
 
-//go:embed ../pages/user.html
+//go:embed user.html
 var userPage string
 
 type UserHandler struct{}
 
-func (ud UserHandler) DisplayUserById(w http.ResponseWriter, r *http.Request) {
+func DisplayUserById(w http.ResponseWriter, r *http.Request) {
 	var user database.User
 
 	t, err := template.New("userPage").Parse(userPage)

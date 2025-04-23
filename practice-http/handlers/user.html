@@ -6,8 +6,11 @@
     <title>{{ if .Username }}{{ .Username }}{{ else }} No user {{end}}</title>
   </head>
   <body>
-    {{ if .ID }}
+    {{ if .Username }} <img src="{{ .Avatar }}" alt="avatar" / >
     <h1>You are logged in as {{ .Username }}</h1>
+    <h2>Email is: {{ .Email }}</h2>
+    <h3>Password is: {{ .Password }}</h3>
+
     {{ else }} Please Provide a user id {{end}}
   </body>
 </html>

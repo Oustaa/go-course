@@ -16,11 +16,11 @@ func main() {
 
 	db.AutoMigrate(&database.User{})
 
+	http.Handle("/statics/", http.StripPrefix("/statics/", http.FileServer(http.Dir("./public"))))
+	http.HandleFunc("/user", handlers.DisplayUserById)
 	err := http.ListenAndServe(":8000", nil)
 	if err != nil {
 		logger.Fatalf("ListenAndServe: %v\n", err)
 	}
 
-	http.HandleFunc("/user", handlers.UserHandler.DisplayUserById)
-	http.ListenAndServe(":8000", nil)
 }
