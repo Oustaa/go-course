@@ -40,7 +40,7 @@ func Auth(next http.HandlerFunc) http.HandlerFunc {
 	}
 }
 
-func Hello(w http.ResponseWriter, r *http.Request) {
+func Hesllo(w http.ResponseWriter, r *http.Request) {
 	params := r.URL.Query()
 	user := User{}
 
@@ -64,8 +64,8 @@ func Hello(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, user)
 }
 
-func main() {
-	http.HandleFunc("/", Auth(Hello))
+func maisd2n() {
+	http.HandleFunc("/", Auth(Hesllo))
 	println("Server running at http://localhost:9000")
 
 	err := http.ListenAndServe(":9999", nil)

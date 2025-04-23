@@ -25,6 +25,6 @@ func He2llo(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(fmt.Sprintf("Hello %s", strings.Join(name, ","))))
 }
 func mai2n() {
-	http.HandleFunc("/", Hello)
+	http.HandleFunc("/", He2llo)
 	log.Fatal(http.ListenAndServe(":8001", nil))
 }

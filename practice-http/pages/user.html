@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ if .Username }}{{ .Username }}{{ else }} No user {{end}}</title>
+  </head>
+  <body>
+    {{ if .ID }}
+    <h1>You are logged in as {{ .Username }}</h1>
+    {{ else }} Please Provide a user id {{end}}
+  </body>
+</html>
+
