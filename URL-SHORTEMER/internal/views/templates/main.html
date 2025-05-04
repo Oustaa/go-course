@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shortner Your URL</title>
+    <style>
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
     <header></header>
@@ -12,7 +18,7 @@
         <!-- i think we should send it as the old days of php ( old means 2023 )-->
         <form action="">
           <div>
-            <label for="url">URL</label>
+            <label for="url">{{ .ID }}</label>
             <input type="text" id="url" name="url" />
           </div>
           <div>

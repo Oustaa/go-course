@@ -15,7 +15,7 @@ func sum(from int, to int, wg *sync.WaitGroup, result *int32) {
 	wg.Done()
 }
 
-func main() {
+func mawin() {
 	s1 := int32(0)
 	wg := &sync.WaitGroup{}
 

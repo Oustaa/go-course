@@ -10,4 +10,3 @@ services:
       MYSQL_ROOT_PASSWORD: Password12
       MYSQL_PASSWORD: Password12
       MYSQL_DATABASE: url_shortener
-
