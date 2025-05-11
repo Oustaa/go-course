@@ -3,22 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/index.css" />
+    <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
     <title>Shortner Your URL</title>
-    <style>
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
   </head>
   <body>
-    <header></header>
+    <header class="page_header container">
+      <a href="/" class="logo"> URL Shortener </a>
+      <nav>
+        <a href="/">Create Link</a>
+        <a href="/">View Links</a>
+        <a href="/">Log out</a>
+      </nav>
+    </header>
     <main>
-      <section>
+      <section class="container">
         <!-- i think we should send it as the old days of php ( old means 2023 )-->
-        <form action="">
+        <form action="create_url_form">
           <div>
-            <label for="url">{{ .ID }}</label>
+            <label for="url">Url</label>
             <input type="text" id="url" name="url" />
           </div>
           <div>
@@ -27,6 +30,7 @@
           </div>
         </form>
       </section>
+      <div style="width: 30px; height: 30px"></div>
     </main>
   </body>
 </html>

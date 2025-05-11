@@ -9,16 +9,22 @@ import (
 	"os"
 	"time"
 
+	"github.com/joho/godotenv"
 	"github.com/oustaa/url-shortner/internal/routes"
 	"github.com/oustaa/url-shortner/internal/store"
 )
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Println("No .env file found, using system environment")
+	}
+
 	var port int
 	flag.IntVar(&port, "port", 8000, "the port where the app will be running on")
 	flag.Parse()
 
-	_, err := os.Stat("./logs")
+	_, err = os.Stat("./logs")
 	if err != nil {
 		if os.IsNotExist(err) {
 			err := os.Mkdir("./logs", 0755)

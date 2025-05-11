@@ -9,7 +9,7 @@ import (
 //go:embed errors.txt
 var errorText string
 
-func main() {
+func maidn() {
 
 	fmt.Println(errorText)
 

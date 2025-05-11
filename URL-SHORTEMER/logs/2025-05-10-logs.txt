@@ -1,0 +1,19 @@
+2025/05/10 20:05:55 server is listning on port 8000
+2025/05/10 20:16:27 server is listning on port 8000
+2025/05/10 23:46:52 server is listning on port 8000
+2025/05/10 23:47:50 server is listning on port 8000
+2025/05/10 23:48:16 server is listning on port 8000
+2025/05/10 23:48:42 server is listning on port 8000
+2025/05/10 23:52:03 server is listning on port 8000
+2025/05/10 23:52:26 server is listning on port 8000
+2025/05/10 23:52:26 server.ListenAndServe: listen tcp :8000: bind: address already in use
+2025/05/10 23:53:01 server is listning on port 2309
+2025/05/10 23:55:10 server is listning on port 8000
+2025/05/10 23:55:37 server is listning on port 8000
+2025/05/10 23:56:03 server is listning on port 8000
+2025/05/10 23:56:21 server is listning on port 8000
+2025/05/10 23:56:38 server is listning on port 8000
+2025/05/10 23:56:45 server is listning on port 8000
+2025/05/10 23:56:52 server is listning on port 8000
+2025/05/10 23:57:11 server is listning on port 8000
+2025/05/10 23:57:33 server is listning on port 8000
