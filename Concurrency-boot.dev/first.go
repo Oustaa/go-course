@@ -15,14 +15,14 @@ func sendEmail(message string) {
 
 // Don't touch below this line
 
-func test(message string) {
+func tesst(message string) {
 	sendEmail(message)
 	time.Sleep(time.Millisecond * 500)
 	fmt.Println("========================")
 }
 
 func maisn() {
-	test("Hello there Kaladin!")
-	test("Hi there Shallan!")
-	test("Hey there Dalinar!")
+	tesst("Hello there Kaladin!")
+	tesst("Hi there Shallan!")
+	tesst("Hey there Dalinar!")
 }

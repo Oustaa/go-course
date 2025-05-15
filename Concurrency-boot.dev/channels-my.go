@@ -8,7 +8,7 @@ func send69(ch chan int) {
 	fmt.Println("AFTER DURRING SENDING")
 }
 
-func main() {
+func maind() {
 	ch := make(chan int)
 
 	fmt.Println("BEFFOR SENDING")
