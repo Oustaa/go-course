@@ -36,7 +36,7 @@ func sum(workers, from, to int) int {
 	return sum
 }
 
-func main() {
+func main4() {
 	res := sum(20, 1, 100)
 	log.Println(res)
 }
